@@ -23,3 +23,4 @@ student using **Call**
 call is used to explicitly bind this to a specific object 
 (student2 in this case) while invoking a function.*/
 student.printName.call(student2);
+

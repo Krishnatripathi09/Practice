@@ -1,15 +1,16 @@
-function separateNumArr(arr){
-  let num=[];
-  let str=[];
-  
-  for(let i=0;i<arr.length;i++){
-    if(typeof arr[i]==='number'){
-      num.push(arr[i])
-    } else if (typeof arr[i]==='string'){
-      str.push(arr[i])
+function sortArray(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+      for (let j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          let temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
     }
+    return arr;
   }
-  return{str,num}
-}
+  
 
-console.log(separateNumArr([1,2,3,"Hi","We are the Brave",8]))
+  
+  
